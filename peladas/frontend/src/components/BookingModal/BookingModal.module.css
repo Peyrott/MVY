@@ -1,0 +1,250 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--space-4);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  padding: 0;
+  z-index: 1;
+}
+
+.closeButton:hover:not(:disabled) {
+  background-color: var(--card2);
+  color: var(--text);
+}
+
+.closeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header {
+  padding: var(--space-6) var(--space-6) 0;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--muted);
+  margin: 0;
+}
+
+.content {
+  padding: var(--space-6);
+}
+
+.courtInfo {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.courtImage {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.courtDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.courtName {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 0 0 var(--space-1) 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.courtAddress {
+  font-size: var(--font-size-sm);
+  color: var(--muted);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.bookingDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailLabel {
+  font-size: var(--font-size-sm);
+  color: var(--muted);
+}
+
+.detailValue {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text);
+}
+
+.pricing {
+  background-color: var(--card2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  padding: var(--space-2) 0;
+}
+
+.priceRow:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+.fee {
+  color: var(--green);
+}
+
+.total {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  padding-top: var(--space-3);
+  margin-top: var(--space-2);
+  border-top: 2px solid var(--border);
+}
+
+.totalValue {
+  color: var(--green);
+  font-size: var(--font-size-lg);
+}
+
+.notice {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: rgba(79, 195, 247, 0.1);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(79, 195, 247, 0.2);
+}
+
+.notice svg {
+  flex-shrink: 0;
+  color: var(--info);
+}
+
+.notice p {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.footer {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6) var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.cancelButton {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: var(--space-3) var(--space-5);
+}
+
+.cancelButton:hover:not(:disabled) {
+  background-color: var(--card2);
+}
+
+.confirmButton {
+  flex: 2;
+  background-color: var(--green);
+  color: var(--black);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-3) var(--space-5);
+}
+
+.confirmButton:hover:not(:disabled) {
+  background-color: var(--green-light);
+}
+
+.confirmButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

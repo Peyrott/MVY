@@ -1,0 +1,108 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 auto var(--space-6);
+}
+
+.success {
+  background-color: rgba(0, 230, 118, 0.2);
+  color: var(--success);
+}
+
+.pending {
+  background-color: rgba(255, 183, 77, 0.2);
+  color: var(--warning);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin-bottom: var(--space-4);
+}
+
+.message {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.paymentInfo {
+  background-color: var(--card2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.paymentInfo span {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--muted);
+  margin-bottom: var(--space-1);
+}
+
+.paymentInfo code {
+  font-size: var(--font-size-sm);
+  color: var(--text);
+  word-break: break-all;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.primaryButton {
+  background-color: var(--green);
+  color: var(--black);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.primaryButton:hover {
+  background-color: var(--green-light);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.secondaryButton:hover {
+  background-color: var(--card2);
+}

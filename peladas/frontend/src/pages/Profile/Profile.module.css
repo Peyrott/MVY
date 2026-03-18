@@ -1,0 +1,349 @@
+.profile {
+  min-height: 100vh;
+  padding: var(--space-8) 0;
+}
+
+.container {
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--black);
+  flex-shrink: 0;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.name {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.email {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.phone {
+  font-size: var(--font-size-sm);
+  color: var(--muted);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.editButton {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.editButton:hover {
+  background-color: var(--card);
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 300px;
+}
+
+.editForm input {
+  background-color: var(--card);
+}
+
+.editActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.saveButton {
+  background-color: var(--green);
+  color: var(--black);
+  font-weight: var(--font-weight-semibold);
+  flex: 1;
+}
+
+.saveButton:hover {
+  background-color: var(--green-light);
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  flex: 1;
+}
+
+.cancelButton:hover {
+  background-color: var(--card);
+}
+
+.signOutButton {
+  background-color: transparent;
+  border: 1px solid var(--error);
+  color: var(--error);
+  margin-left: auto;
+}
+
+.signOutButton:hover {
+  background-color: var(--error);
+  color: var(--text);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all var(--transition-fast);
+  border-radius: 0;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+/* Content */
+.content {
+  min-height: 300px;
+}
+
+/* Bookings */
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bookingCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.bookingInfo {
+  flex: 1;
+}
+
+.bookingInfo h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.bookingDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.bookingDetails span {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.status {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.statusPending {
+  background-color: rgba(255, 183, 77, 0.2);
+  color: var(--warning);
+}
+
+.statusConfirmed {
+  background-color: rgba(0, 230, 118, 0.2);
+  color: var(--success);
+}
+
+.statusCancelled {
+  background-color: rgba(255, 82, 82, 0.2);
+  color: var(--error);
+}
+
+.statusCompleted {
+  background-color: rgba(79, 195, 247, 0.2);
+  color: var(--info);
+}
+
+.bookingActions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.cancelAction {
+  background-color: transparent;
+  border: 1px solid var(--error);
+  color: var(--error);
+  font-size: var(--font-size-sm);
+}
+
+.cancelAction:hover {
+  background-color: var(--error);
+  color: var(--text);
+}
+
+.reviewAction {
+  background-color: var(--green);
+  color: var(--black);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.reviewAction:hover {
+  background-color: var(--green-light);
+}
+
+/* Favorites Grid */
+.favoritesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+/* Empty State */
+.empty {
+  text-align: center;
+  padding: var(--space-12);
+}
+
+.emptyIcon {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.empty h3 {
+  font-size: var(--font-size-xl);
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.empty p {
+  color: var(--muted);
+  margin-bottom: var(--space-6);
+}
+
+.emptyAction {
+  display: inline-block;
+  background-color: var(--green);
+  color: var(--black);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.emptyAction:hover {
+  background-color: var(--green-light);
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .signOutButton {
+    margin-left: 0;
+    margin-top: var(--space-4);
+  }
+
+  .bookingCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .bookingActions {
+    width: 100%;
+  }
+
+  .bookingActions button,
+  .bookingActions a {
+    flex: 1;
+    justify-content: center;
+  }
+}

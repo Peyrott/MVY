@@ -1,0 +1,342 @@
+.dashboard {
+  min-height: 100vh;
+  padding: var(--space-8) 0;
+}
+
+.container {
+  max-width: var(--max-width-xl);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin: 0;
+}
+
+.periodSelect {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.statCard {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--green);
+  margin-bottom: var(--space-1);
+}
+
+.statLabel {
+  font-size: var(--font-size-sm);
+  color: var(--muted);
+}
+
+/* Section */
+.section {
+  margin-bottom: var(--space-8);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.section h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 0;
+}
+
+.addButton {
+  background-color: var(--green);
+  color: var(--black);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.addButton:hover {
+  background-color: var(--green-light);
+}
+
+/* Add Form */
+.addForm {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.formGrid input,
+.formGrid select {
+  background-color: var(--card2);
+}
+
+.addForm textarea {
+  width: 100%;
+  margin-bottom: var(--space-4);
+  background-color: var(--card2);
+}
+
+.amenitiesSection {
+  margin-bottom: var(--space-4);
+}
+
+.amenitiesSection label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.amenityRow {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.amenityRow input {
+  flex: 1;
+  background-color: var(--card2);
+}
+
+.removeAmenity {
+  background-color: var(--card2);
+  border: 1px solid var(--error);
+  color: var(--error);
+  width: 40px;
+  padding: 0;
+}
+
+.addAmenity {
+  background-color: transparent;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: var(--font-size-sm);
+}
+
+.addAmenity:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.submitButton {
+  background-color: var(--green);
+  color: var(--black);
+  font-weight: var(--font-weight-semibold);
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: var(--green-light);
+}
+
+/* Courts List */
+.courtsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.courtRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.courtInfo {
+  flex: 1;
+}
+
+.courtInfo h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  margin: 0 0 var(--space-1) 0;
+}
+
+.active {
+  font-size: var(--font-size-xs);
+  color: var(--success);
+  background-color: rgba(0, 230, 118, 0.1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.inactive {
+  font-size: var(--font-size-xs);
+  color: var(--muted);
+  background-color: var(--card2);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.courtStats {
+  display: flex;
+  gap: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.toggleButton {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-4);
+}
+
+.toggleButton:hover {
+  background-color: var(--card2);
+}
+
+/* Bookings Table */
+.bookingsTable {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.tableHeader,
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  align-items: center;
+}
+
+.tableHeader {
+  background-color: var(--card2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.tableRow {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.pending {
+  color: var(--warning);
+}
+
+.confirmed {
+  color: var(--success);
+}
+
+.cancelled {
+  color: var(--error);
+}
+
+.completed {
+  color: var(--info);
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--border);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .courtRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .courtStats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
+  }
+
+  .tableHeader span:nth-child(3),
+  .tableHeader span:nth-child(4),
+  .tableRow span:nth-child(3),
+  .tableRow span:nth-child(4) {
+    display: none;
+  }
+}
