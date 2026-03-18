@@ -106,8 +106,7 @@ CREATE TABLE bookings (
     notes TEXT,
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ DEFAULT NOW(),
-    CONSTRAINT unique_active_booking UNIQUE (court_id, booking_date, time_slot)
-    WHERE status IN ('pending', 'confirmed')
+    CONSTRAINT unique_active_booking UNIQUE (court_id, booking_date, time_slot, status)
 );
 
 CREATE INDEX idx_bookings_user ON bookings(user_id);
@@ -115,6 +114,11 @@ CREATE INDEX idx_bookings_court ON bookings(court_id);
 CREATE INDEX idx_bookings_date ON bookings(booking_date);
 CREATE INDEX idx_bookings_status ON bookings(status);
 CREATE INDEX idx_bookings_payment ON bookings(payment_id);
+
+-- Partial index to prevent duplicate active bookings
+CREATE UNIQUE INDEX idx_unique_active_booking
+ON bookings(court_id, booking_date, time_slot)
+WHERE status IN ('pending', 'confirmed');
 
 -- ============================================
 -- REVIEWS TABLE
