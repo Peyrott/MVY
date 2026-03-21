@@ -216,7 +216,7 @@ export function Courts() {
                     }
                     // Show ellipsis
                     if (page === filters.page - 2 || page === filters.page + 2) {
-                      return <span key={page} className={styles.ellipsis}>...\u003c/span>;
+                      return <span key={page} className={styles.ellipsis}>...</span>;
                     }
                     return null;
                   })}
